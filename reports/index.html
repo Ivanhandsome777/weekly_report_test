@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bybit Weekly Reports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 60px 50px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #2c3e50 0%, #E6B887 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .report-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #E6B887 0%, #D4A574 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .report-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(230, 184, 135, 0.3);
+        }
+
+        .report-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .report-description {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .language-tag {
+            background: linear-gradient(135deg, #E6B887 0%, #D4A574 100%);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .version-tag {
+            background: rgba(52, 73, 94, 0.1);
+            color: #2c3e50;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .reports-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .report-card {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 0 5px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .report-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Industry Weekly Reports</h1>
+            <p class="subtitle">Weekly Report: 2025-08-25 to 2025-09-01</p>
+        </div>
+
+        <div class="reports-grid">
+            <a href="cn-long.html" class="report-card">
+                <div class="report-title">中文详细版</div>
+                <div class="report-description">完整的中文周报，包含详细的市场分析、宏观事件和竞争对手报告。</div>
+                <div class="report-meta">
+                    <span class="language-tag">中文</span>
+                    <span class="version-tag">详细版</span>
+                </div>
+            </a>
+
+            <a href="cn-short.html" class="report-card">
+                <div class="report-title">中文简化版</div>
+                <div class="report-description">精简的中文周报，重点突出关键信息和核心观点。</div>
+                <div class="report-meta">
+                    <span class="language-tag">中文</span>
+                    <span class="version-tag">简化版</span>
+                </div>
+            </a>
+
+            <a href="en-long.html" class="report-card">
+                <div class="report-title">English Detailed</div>
+                <div class="report-description">Comprehensive English weekly report with detailed market analysis, macro events, and competitor insights.</div>
+                <div class="report-meta">
+                    <span class="language-tag">English</span>
+                    <span class="version-tag">Detailed</span>
+                </div>
+            </a>
+
+            <a href="en-short.html" class="report-card">
+                <div class="report-title">English Summary</div>
+                <div class="report-description">Concise English weekly report highlighting key information and core insights.</div>
+                <div class="report-meta">
+                    <span class="language-tag">English</span>
+                    <span class="version-tag">Summary</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: September 1, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
+
