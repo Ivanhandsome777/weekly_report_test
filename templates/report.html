@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ report.title }} - Industry Weekly Reports{% endblock %}
+<!-- {% block title %}{{ report.title }} - Industry Weekly Reports{% endblock %} -->
 
 {% block extra_css %}
 <style>
@@ -29,7 +29,7 @@
         align-items: center;
         color: #E6B887;
         text-decoration: none;
-        margin-bottom: 1rem;
+        margin: 2rem 0 1rem 2rem;
         font-weight: 500;
     }
     .back-link:hover {
@@ -62,17 +62,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="report-header">
+<!-- <div class="report-header">
     <div class="container">
-        <a href="{{ url_for('index') }}" class="back-link">Back to Reports</a>
-        <h1 class="report-title">{{ report.title }}</h1>
+        <!-- <a href="{{ url_for('index') }}" class="back-link">Back to Reports</a> -->
+        <!-- <h1 class="report-title">{{ report.title }}</h1> -->
         <div class="report-meta">
-            <span class="report-badge">{{ report.language.upper() }}</span>
-            <span class="report-badge">{{ report.type.title() }}</span>
-            <span>{{ current_period }}</span>
+            <!-- <span class="report-badge">{{ report.language.upper() }}</span> -->
+            <!-- <span class="report-badge">{{ report.type.title() }}</span> -->
+            <!-- <span>{{ current_period }}</span> -->
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="report-content">
     {{ content | safe }}
